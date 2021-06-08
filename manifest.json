@@ -1,5 +1,6 @@
 {
   "domain": "mitemp2_bt",
+  "version": "1.0.0",
   "name": "Xiaomi Mijia BLE v2 Temperature and Humidity Sensor",
   "documentation": "https://www.home-assistant.io/integrations/mitemp_bt",
   "requirements": [],
