@@ -37,7 +37,7 @@ class MiTemp2BtPoller:
         self._last_read = None
         self._fw_last_read = None
         self.retries = retries
-        self.ble_timeout = 10
+        self.ble_timeout = 60
         self.lock = Lock()
         self._firmware_version = None
         self.battery = None
@@ -163,7 +163,7 @@ class MiTemp2BtPoller:
 
         res = dict()
 
-       
+
         res[MI_TEMPERATURE] = round(int.from_bytes([data[0], data[1]], "little")/100.0, 1)
         res[MI_HUMIDITY] = int.from_bytes([data[2]], "little")
 
